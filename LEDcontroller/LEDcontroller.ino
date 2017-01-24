@@ -1,6 +1,6 @@
 int ledPin1 = 26 //A3
-int ledPin2 = 27 //A4
-int ledPin3 = 28 //A5
+              int ledPin2 = 27 //A4
+                            int ledPin3 = 28 //A5
 
 #define GET_LED(data, num) (data >> num) & 0x01
 
@@ -12,7 +12,7 @@ void setup() {
 }
 
 void loop() {
-  if(Serial.available()){
+  if (Serial.available()) {
     byte input = Serial.read();
     digitalWrite(ledPin1, GET_LED(input, 0));
     digitalWrite(ledPin2, GET_LED(input, 1));
